@@ -1,5 +1,5 @@
 /**
- * @author Justin Heuston
+ * @author Justin Houston
  */
 
 public class Logic {
