@@ -6,7 +6,7 @@ public class Logic
         //TODO: create an array of words 
         //TODO: pull a random one
     }
-    public satic String firstProcessing(String Phrase)
+    public static String firstProcessing(String Phrase)
     {
         //TODO: remove puncuation 
         //TODO: return them 
