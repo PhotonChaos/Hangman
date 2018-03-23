@@ -12,7 +12,7 @@ public class Game {
     
     /**
      * @param s the word that the player needs to guess
-     */
+     **/
     public Game(String s) {
         word = s;
         guesses = 8; // if there is no guess parameter, it defaults to 8
@@ -21,7 +21,7 @@ public class Game {
     /**
      * @param s the word that the player needs to guess
      * @param g the number of guesses the player has
-     */
+     **/
     Game(String s, int g) {
         guesses = g;
         word = s;
