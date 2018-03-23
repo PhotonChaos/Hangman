@@ -6,6 +6,8 @@ public class Game {
     public String word;
     public int guesses = 0;
 
+    // Constructors
+    
     /**
      * @param s the word that the player needs to guess
      */
@@ -22,6 +24,12 @@ public class Game {
         guesses = g;
         word = s;
     }
-
+    
+    // Methods
+    
+    public processGuess(String input) {
+        // TODO: check guesses to se how they stack up to phrase
+        // TODO: update main guess variable
+    }
 
 }
