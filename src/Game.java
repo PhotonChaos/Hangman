@@ -3,8 +3,10 @@
  * @version 0.0.1a
  **/
 public class Game {
-    public String word;
-    public int guesses = 0;
+    public static final int maxGuesses = 8;
+
+    private final String word;
+    private int guessesLeft = maxGuesses;
 
     // Constructors
     
