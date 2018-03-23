@@ -19,4 +19,5 @@ This class is the object that represents the current game.
 TODO
 
 ### Visuals
-TODO
+This is that class that geneates visuals
+#### Methods
