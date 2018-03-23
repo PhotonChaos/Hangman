@@ -33,4 +33,12 @@ public class Main {
     private static void gameLoop(Game game) {
 
     }
+ 
+    private static String givePhrase() {
+        // TODO: variable creation
+        // TODO: create an array of words
+        // TODO: pull a random one
+
+        return "";
+    }
 }
