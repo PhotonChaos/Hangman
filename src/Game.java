@@ -30,8 +30,19 @@ public class Game {
     // Methods
     
     public processGuess(String input) {
-        // TODO: check guesses to se how they stack up to phrase
-        // TODO: update main guess variable
+        if(guess.length() != 1) {
+
+        } else {
+        	if(word.contains(guess)) {
+        		for(int i = 0; i < word.length(); i++) {
+        			if(word[i] == guess) {
+        				guessedWord = guessedWord.substring(0, i) + guess + guessedWord.substring(i+1);
+        			}
+        		}
+        	} else {
+        		guessesLeft--;
+        	}
+        }
     }
 
 }
