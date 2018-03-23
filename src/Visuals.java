@@ -1,5 +1,5 @@
 
-public class CSGroupPojectAshvanthVisuals
+public class Visuals
 {
     private static String[] words = {"word1", "word1", "word1", "word1", "word1"};
     private static String word = words[(int) (Math.random() * words.length)];
