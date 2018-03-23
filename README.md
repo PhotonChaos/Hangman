@@ -1,4 +1,5 @@
 # Hangman
+This is a hangman program written in java.
 ## Classes
 ### Main
 This is the main entry point for the program, and has sone useful methods.
