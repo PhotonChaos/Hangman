@@ -1,6 +1,7 @@
 # Hangman
-This is a hangman program written in java.
+This is a hangman program written in java. The user is to guess one letter at a time. The user will be given 8 guesses, losing on the 8th wrong guess. Each phrase may be multiple words, and punctuation will be revealed immediately. The words will be no shorter than **3** characters in length.
 ## Classes
+This program uses multiple classes for various methods such as drawing the scene.
 ### Main
 This is the main entry point for the program, and has sone useful methods.
 #### Methods
