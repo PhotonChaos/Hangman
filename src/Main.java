@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 /**
   * @author Calum Coppack
@@ -35,10 +36,11 @@ public class Main {
     }
  
     private static String givePhrase() {
-        // TODO: variable creation
-        // TODO: create an array of words
-        // TODO: pull a random one
-
-        return "";
+        andom rand = new Random();
+        int index;
+        String[] words = {"hello","goodbye","ravioli","senate","trebuchet","details","sniper","garbage","rules","coffee","jokes","general","kenobi","skywalker","shorter","expeted","garlic","bread","freedom","oil","murica","soviet","union","crows","counting","kahoot","bazinga","conclution","horse","mountian","witch","upvote","mercy","god","java","oh hi mark","pee is stored in the balls","burger king foot lettuce","me too thanks","hello world","do it","what about the droid attack on the wookies","pizza time","life is a highway","north korea best korea","arrays start at 1","you never know whats going to come through that door","giff not jiff","when life gives you lemons","wot in tarnation","whom'st'd've","hey that's pretty good","i shouldn't it's not the jedi way","it's over anakin i have the high ground","have you ever heard the tradgy of darth plagius the wise?"};
+        // array of my 50 potenial solutions
+        index = rand.nextInt(50);
+        return words[index];  
     }
 }
