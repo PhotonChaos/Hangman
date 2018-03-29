@@ -12,43 +12,68 @@ import java.util.Random;
 public class Main {
     // Constants
     private static final int guesses = 8; // the number of guesses
+    private static final int listLength = 55;
+    private static String[] wordList = new String[listLength];
+    private static int roundsPlayed = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
 
-        System.out.println(s);
+        // fill the word list with the contents of the file
+        File words = new File("words.txt"); // file
+        Scanner fsc = new Scanner(words);   // file scanner
+        for(int i = 0; i < listLength; i++) {
+            wordList[i] = sc.nextLine(); 
+        }
+
+        sc.close();
+
+        boolean multi;
+        boolean res;
+
+        while(exit == false) {
+        	//START MENU HERE
+        	
+
+	        do {
+	        	++roundsPlayed;
+
+	        	res = startGame();
+	        } while(res);
+	    }
+
+	    // END OF PROGRAM	
     }
 
     /**
      * @param word the word that the player needs to guess, this will be passed into the class constructor
-     */
-    private static void startGame(String word) {
-        Game g = new Game(word, guesses);
+     * 
+     * This method constructs the game
+     **/
+    private static boolean startGame(boolean multi) {
+        Game g;
+        Scanner sc = new Scanner(System.in);
 
-
-        gameLoop(g);
+        g = new Game(wordList[(new Random()).nextInt(56)], guesses, );
+        return gameLoop(g);
     }
 
     /**
      * @param game The current Game object
      */
-    private static void gameLoop(Game game) {
+    private static boolean gameLoop(Game game) {
 
+
+    	return endGame(game);
     }
- 
-    private static void readFile() throws IOException
-    {
-        final int listLength = 55;          
-        File words = new File("words.txt");
-        Scanner sc = new Scanner(words);
-        String[] wordList = new String[listLength];
-        for(int i = 0; i < listLength; i++)
-        {
-            wordList[i] = sc.nextLine(); 
-        }
-        sc.close();
-    }
+
+    private static boolean endGame(Game g) {
+    	System.out.println("Would you like to play again? (y/n)");
+    	System.out.print("> ");
+
+    	return Character.toLowerCase(new Scanner(System.in).nextLine().toCharArray()[0]) == 'y';
+    } 
 
  
    public static String givePhrase()
