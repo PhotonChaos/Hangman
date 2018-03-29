@@ -6,34 +6,47 @@ public class Game {
     public static final int maxGuesses = 8;
     private final String word; 
     
-    private char[] letters = new char[25];
+    private char[] letters = new char[23];
     private String guessed;
     private int guessesLeft = maxGuesses;
+    private boolean isMultiplayer = False;
 
     // Constructors
     
     /**
-     * @param s the word that the player needs to guess
+     * @param _word the word that the player needs to guess
      **/
-    Game(String s) {
-        word = s;
-        guessesLeft = 8; // if there is no guess parameter, it defaults to 8
+    Game(String _word) {
+        word = _word;
     }
 
     /**
-     * @param s the word that the player needs to guess
-     * @param g the number of guesses the player has
+     * @param _word the word that the player needs to guess
+     * @param guesses the number of guesses the player has
      **/
-    Game(String s, int g) {
-        word = s;
-        guessesLeft = g;
+    Game(String _word, int guesses) {
+        word = _word;
+        guessesLeft = guesses;
+    }
+
+    /**
+      * @param _word the word that the player needs to guess
+      * @param guesses the number of guesses the player has
+      * @param multiplayer if the game is in multiplayer mode
+      **/
+    Game(String word, int guesses, boolean multiplayer) {
+		word = _word;
+        guessesLeft = guesses;
+        isMultiplayer = multiplayer;
     }
     
     // Methods
     
-    public void processGuess(String guess) {
+    public String processGuess(String guess) {
+    	String errorMessage = "";
+
         if(guess.length() != 1) {
-            
+        	errorMessage = "Please enter a valid input!";
         } else {
             if(word.contains(guess)) {
                 for(int i = 0; i < word.length(); i++) {
@@ -45,5 +58,7 @@ public class Game {
                 guessesLeft--;
             }
         }
+
+       	return errorMessage;
     }
 }
