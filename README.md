@@ -3,7 +3,7 @@ This is a hangman program written in java. The user is to guess one letter at a 
 ## Classes
 This program uses multiple classes for various methods such as drawing the scene.
 ### Main
-This is the main entry point for the program, and has sone useful methods.
+This is the main entry point for the program, and has some useful methods.
 #### Methods
 ##### main(String[] args)
 This is the entry point for the application.
@@ -21,5 +21,11 @@ This class is the object that represents the current game.
 TODO
 
 ### Visuals
-This is that class that geneates visuals
+This is that class that geneates visuals.
+
+### Visuals
+This is the class that generates all viewable text and art.
+
+### DashesAndMenu
+As of now, has a placeholder menu and can turn dashes into rightly guessed letters (remember, all the letters need to be in CAPS)
 #### Methods
