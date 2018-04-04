@@ -75,8 +75,7 @@ public class Main {
     	return Character.toLowerCase(new Scanner(System.in).nextLine().toCharArray()[0]) == 'y';
     }
     private static void readFile() throws IOException
-    {
-       	final int listLength = 55;          
+    {     
         File words = new File("words.txt");
 	Scanner sc = new Scanner(words);
 	String[] wordList = new String[listLength];
@@ -89,7 +88,6 @@ public class Main {
  	
    public static String givePhrase()
     {
-        final int listLength = 55;
         Random rand = new Random();
         int x = rand.nextInt(listLength);
         return wordList[x];
