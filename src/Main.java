@@ -63,7 +63,12 @@ public class Main {
      * @param game The current Game object
      */
     private static boolean gameLoop(Game game) {
+    	// TODO: Input Guess
+    	String guess = new Scanner(System.in).nextLine();
 
+    	String msg = game.processGuess(guess)
+
+    	// TODO: Pass error into the display class
 
     	return endGame(game);
     }
