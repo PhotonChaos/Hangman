@@ -73,9 +73,20 @@ public class Main {
     	System.out.print("> ");
 
     	return Character.toLowerCase(new Scanner(System.in).nextLine().toCharArray()[0]) == 'y';
-    } 
-
- 
+    }
+    private static void readFile() throws IOException
+    {
+       	final int listLength = 55;          
+        File words = new File("words.txt");
+	Scanner sc = new Scanner(words);
+	String[] wordList = new String[listLength];
+        for(int i = 0; i < listLength; i++)
+        {
+           	 wordList[i] = sc.nextLine(); 
+        }
+        sc.close();
+    }    
+ 	
    public static String givePhrase()
     {
         final int listLength = 55;
