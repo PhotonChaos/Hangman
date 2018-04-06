@@ -1,14 +1,20 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class CSGroupPojectAshvanthVisuals
+public class Visuals
 {
     private static String[] words = {"word1", "word2", "word3", "word4", "word5"};
     private static String word = words[(int) (Math.random() * words.length)];
     private static String star = new String(new char[word.length()]).replace("\0", "*");
     private static int count = 0;
+    
+    private Game game;
+    
+    public Visuals(Game g) {
+        game = g;
+    }
 
-    public static void main(String[] args)
+    public void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
 
@@ -22,7 +28,7 @@ public class CSGroupPojectAshvanthVisuals
         sc.close();
     }
 
-    public static void CSGroupPojectAshvanthVisuals(String guess)
+    public void CSGroupPojectAshvanthVisuals(String guess)
     {
         String newstar = "";
         for (int i = 0; i < word.length(); i++)
@@ -55,7 +61,7 @@ public class CSGroupPojectAshvanthVisuals
         }
     }
 
-    public static void hangmanImage() {
+    public void hangmanImage() {
 
         if (count == 1)
         {
