@@ -76,7 +76,6 @@ public class Visuals
             System.out.println("   |                  "); //8
             System.out.println("   |                  "); //9
             System.out.println("   |                  "); //10
-            System.out.println("7 more guesses");
         }
         
         if (count == 2)
@@ -92,7 +91,6 @@ public class Visuals
             System.out.println("   |                  "); //8
             System.out.println("   |                  "); //9
             System.out.println(" __|__                "); //10
-            System.out.println("6 more guesses");
         }
         
         if (count == 3)
@@ -108,7 +106,6 @@ public class Visuals
             System.out.println("   |                  "); //8
             System.out.println("   |                  "); //9
             System.out.println(" __|__                "); //10
-            System.out.println("5 more guesses");
         }
         
         if (count == 4)
@@ -124,7 +121,6 @@ public class Visuals
             System.out.println("   |           |      "); //8
             System.out.println("   |                  "); //9
             System.out.println(" __|__                "); //10
-            System.out.println("4 more guesses");
         }
         
         if (count == 5)
@@ -140,7 +136,6 @@ public class Visuals
             System.out.println("   |           |      "); //8
             System.out.println("   |         //       "); //9
             System.out.println(" __|__      //        "); //10
-            System.out.println("3 more guesses");
         }
         
         if (count == 6)
@@ -156,7 +151,6 @@ public class Visuals
             System.out.println("   |           |      "); //8
             System.out.println("   |         // \\    "); //9
             System.out.println(" __|__      //   \\   "); //10
-            System.out.println("2 more guesses");
         }
         
         if (count == 7)
