@@ -7,42 +7,45 @@ public class CSGroupPojectAshvanthDashesAndMenu
     StringBuffer dashes;
     char letter;
 
-    public CSGroupPojectAshvanthDashesAndDashesToLetters()
+    public CSGroupPojectAshvanthDashesAndMenu()
     {
-        System.out.println("|===============================================================================================|");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|                                               |                                               |");
-        System.out.println("|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|");
+        System.out.println(" |=================================================================================================================================|");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |                                                                |                                                                |");
+        System.out.println(" |=================================================================================================================================|");
     }
 
     public static void matchLetter(String secret, StringBuffer dashes, char letter)
@@ -59,7 +62,9 @@ public class CSGroupPojectAshvanthDashesAndMenu
     {
         StringBuffer dashes = new StringBuffer(s.length());
         for (int count=0; count < s.length(); count++)
+        {
             dashes.append('-');
+        }
         return dashes;
     }
 }
