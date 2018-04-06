@@ -187,7 +187,9 @@ public class Visuals
         System.out.println(); // to space it out
         
         System.out.println(">");
-        
-        
+    }
+    
+    public void changeGame(Game g) {
+        game = g;
     }
 }
