@@ -8,8 +8,8 @@ public class Game {
     
     private char[] wrongGuesses;
     private String guessedWord;
-    public int guessesLeft = maxGuesses;
-    private boolean isMultiplayer = false;
+    private int guessesLeft = maxGuesses;
+    private boolean isMultiplayer = false;  
 
     // Constructors
     
@@ -18,6 +18,16 @@ public class Game {
      **/
     Game(String _word) {
         word = _word;
+
+        // parse for punctuation
+        for (char c : _word.toCharArray()) {
+        	if("!@#$%^&*()\'\";:[]{}\\|-=+<>,.?/~` ".contains(c.toString())) {
+	        	guessedWord += '_';
+        	} else {
+        		guessedWord += _word.toCharArray()[i];
+        	}
+        }
+
         wrongGuesses = new char[guessesLeft];
     }
 
@@ -61,7 +71,7 @@ public class Game {
     	boolean b = false;
 
         if(guess.length() != 1) {
-        	errorMessage = "Please enter a valid input!";
+        	errorMessage = "Please enter a valid input!"; // guess is invalid
     	} else {
     		for (char c : "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray()) {
     			if(Character.toUpperCase(guess.toCharArray()[0]) == c) b = true;
@@ -71,14 +81,14 @@ public class Game {
 	            if(word.contains(guess)) {
 	                for(int i = 0; i < word.length(); i++) {
 	                    if(word.toCharArray()[i] == guess.toCharArray()[0]) {
-	                        guess = guess.substring(0, i) + guess + guess.substring(i+1);
+	                        guess = guess.substring(0, i) + guess + guess.substring(i+1); // 
 	                    }
 	                }
 	            } else {
-	                guessesLeft--;
+	                guessesLeft--; // Guess is valid, but incorrect
 	            }
 	        } else {
-	        	errorMessage = "Please enter a valid input!";
+	        	errorMessage = "Please enter a valid input!"; // guess is invalid
 	        }
         }
 
