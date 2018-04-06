@@ -8,7 +8,7 @@ public class Game {
     
     private char[] wrongGuesses;
     private String guessedWord;
-    private int guessesLeft = maxGuesses;
+    public int guessesLeft = maxGuesses;
     private boolean isMultiplayer = false;
 
     // Constructors
