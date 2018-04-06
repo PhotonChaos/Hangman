@@ -15,7 +15,7 @@ public class Visuals
     }
 
     
-
+    /*
     public void CSGroupPojectAshvanthVisuals(String guess)
     {
         String newstar = "";
@@ -36,7 +36,7 @@ public class Visuals
         if (star.equals(newstar))
         {
             count++;
-            hangmanImage();
+            //hangmanImage();
         }
         else
         {
@@ -48,12 +48,11 @@ public class Visuals
             System.out.println("Winner Winner, Chicken Dinner!: " + word);
         }
     }
-
-    public void hangmanImage(String error) {
-
+    */
+    public void hangmanImage(String errorMessage) {
         if (count == 1)
         {
-            System.out.println("Fail");
+            System.out.println("Incorrect.");
             //System.out.println("                    "); //1
             System.out.println("   |                  "); //2
             System.out.println("   |                  "); //3
@@ -68,7 +67,7 @@ public class Visuals
         
         else if (count == 2)
         {
-            System.out.println("Wrong guess");
+            System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |           |      "); //2
             System.out.println("   |                  "); //3
@@ -83,12 +82,12 @@ public class Visuals
         
         else if (count == 3)
         {
-            System.out.println("Wrong guess");
+            System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
-            System.out.println("   |        //   \\   "); //3
-            System.out.println("   |       ||     ||  "); //4
-            System.out.println("   |        \\___//   "); //5
+            System.out.println("   |         /   \\   "); //3
+            System.out.println("   |        |     |   "); //4
+            System.out.println("   |        \\___/    "); //5
             System.out.println("   |                  "); //6
             System.out.println("   |                  "); //7
             System.out.println("   |                  "); //8
@@ -98,7 +97,7 @@ public class Visuals
         
         else if (count == 4)
         {
-            System.out.println("Wrong guess");
+            System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |        //   \\   "); //3
@@ -113,7 +112,7 @@ public class Visuals
         
         else if (count == 5)
         {
-            System.out.println("Wrong guess");
+            System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |        //   \\   "); //3
@@ -128,7 +127,7 @@ public class Visuals
         
         else if (count == 6)
         {
-            System.out.println("Wrong guess");
+            System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |        //   \\   "); //3
@@ -143,7 +142,7 @@ public class Visuals
         
         else if (count == 7)
         {
-            System.out.println("Wrong guess");
+            System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |        //   \\   "); //3
@@ -171,17 +170,23 @@ public class Visuals
             System.out.println(" __|__      //   \\   "); //10
         }
         
+        System.out.print("Wrong Guesses: ");
+        for(char c : game.wrongGuesses) {
+            System.out.print(c+" ");
+        }
+        System.out.println();
+        
         System.out.println("you have "+game.guessesLeft+" guesses left");
         
         System.out.println(); // to space it out
         
-        System.out.prinln(errorMessage);
+        System.out.println(errorMessage);
         
-        System.out.prinln(guessedWord);
+        System.out.println(game.guessedWord);
         
-        System.out.prinln();// to space it out
+        System.out.println(); // to space it out
         
-        System.out.prinln(">");
+        System.out.println(">");
         
         
     }
