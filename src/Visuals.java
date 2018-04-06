@@ -68,7 +68,7 @@ public class Visuals
         
         else if (count == 2)
         {
-            System.out.println("Fail");
+            System.out.println("Wrong guess");
             System.out.println("   _____________      "); //1
             System.out.println("   |           |      "); //2
             System.out.println("   |                  "); //3
@@ -83,7 +83,7 @@ public class Visuals
         
         else if (count == 3)
         {
-            System.out.println("Fail");
+            System.out.println("Wrong guess");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |        //   \\   "); //3
@@ -98,7 +98,7 @@ public class Visuals
         
         else if (count == 4)
         {
-            System.out.println("Fail");
+            System.out.println("Wrong guess");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |        //   \\   "); //3
@@ -113,7 +113,7 @@ public class Visuals
         
         else if (count == 5)
         {
-            System.out.println("Fail");
+            System.out.println("Wrong guess");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |        //   \\   "); //3
@@ -128,7 +128,7 @@ public class Visuals
         
         else if (count == 6)
         {
-            System.out.println("Fail");
+            System.out.println("Wrong guess");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |        //   \\   "); //3
@@ -143,7 +143,7 @@ public class Visuals
         
         else if (count == 7)
         {
-            System.out.println("Fail");
+            System.out.println("Wrong guess");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |        //   \\   "); //3
