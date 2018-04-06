@@ -61,7 +61,7 @@ public class Visuals
         }
     }
 
-    public void hangmanImage() {
+    public void hangmanImage(String error) {
 
         if (count == 1)
         {
@@ -166,7 +166,6 @@ public class Visuals
             System.out.println("   |           |      "); //8
             System.out.println("   |         // \\    "); //9
             System.out.println(" __|__      //   \\   "); //10
-            System.out.println("1 more guess");
         }
         
         if (count == 8)
@@ -182,7 +181,22 @@ public class Visuals
             System.out.println("   |           |      "); //8
             System.out.println("   |         // \\    "); //9
             System.out.println(" __|__      //   \\   "); //10
-            System.out.println("GAME OVER! Answer was: " + word);
         }
+        
+        // Guesses left
+        
+        System.out.println(); // to space it out
+        
+        
+        
+        // error line
+        
+        // word with dashes
+        
+        // space
+        
+        // input (>)
+        
+        
     }
 }
