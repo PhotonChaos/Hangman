@@ -14,19 +14,7 @@ public class Visuals
         game = g;
     }
 
-    public void main(String[] args)
-    {
-        Scanner sc = new Scanner(System.in);
-
-        while (count < 8 && star.contains("*"))
-        {
-            System.out.println("Guess A Letter / Press ? To Guess The Word"); //replace ?
-            System.out.println(star);
-            String guess = sc.next();
-            //hang(guess);
-        }
-        sc.close();
-    }
+    
 
     public void CSGroupPojectAshvanthVisuals(String guess)
     {
@@ -78,7 +66,7 @@ public class Visuals
             System.out.println("   |                  "); //10
         }
         
-        if (count == 2)
+        else if (count == 2)
         {
             System.out.println("Fail");
             System.out.println("   _____________      "); //1
@@ -93,7 +81,7 @@ public class Visuals
             System.out.println(" __|__                "); //10
         }
         
-        if (count == 3)
+        else if (count == 3)
         {
             System.out.println("Fail");
             System.out.println("   _____________      "); //1
@@ -108,7 +96,7 @@ public class Visuals
             System.out.println(" __|__                "); //10
         }
         
-        if (count == 4)
+        else if (count == 4)
         {
             System.out.println("Fail");
             System.out.println("   _____________      "); //1
@@ -123,7 +111,7 @@ public class Visuals
             System.out.println(" __|__                "); //10
         }
         
-        if (count == 5)
+        else if (count == 5)
         {
             System.out.println("Fail");
             System.out.println("   _____________      "); //1
@@ -138,7 +126,7 @@ public class Visuals
             System.out.println(" __|__      //        "); //10
         }
         
-        if (count == 6)
+        else if (count == 6)
         {
             System.out.println("Fail");
             System.out.println("   _____________      "); //1
@@ -153,7 +141,7 @@ public class Visuals
             System.out.println(" __|__      //   \\   "); //10
         }
         
-        if (count == 7)
+        else if (count == 7)
         {
             System.out.println("Fail");
             System.out.println("   _____________      "); //1
@@ -168,7 +156,7 @@ public class Visuals
             System.out.println(" __|__      //   \\   "); //10
         }
         
-        if (count == 8)
+        else if (count == 8)
         {
             System.out.println("YOU LOSE");
             System.out.println("   _____________      "); //1
@@ -183,19 +171,17 @@ public class Visuals
             System.out.println(" __|__      //   \\   "); //10
         }
         
-        // Guesses left
+        System.out.println("you have "+game.guessesLeft+" guesses left");
         
         System.out.println(); // to space it out
         
+        System.out.prinln(errorMessage);
         
+        System.out.prinln(guessedWord);
         
-        // error line
+        System.out.prinln();// to space it out
         
-        // word with dashes
-        
-        // space
-        
-        // input (>)
+        System.out.prinln(">");
         
         
     }
