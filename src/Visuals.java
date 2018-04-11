@@ -17,6 +17,8 @@ public class Visuals
     public void hangmanImage(String errorMessage) {
         int count = game.mGuess - game.guessesLeft;
         
+        System.out.println("\u000C");
+        
         if(game.isMultiplayer) {
             System.out.println("Score (a-b): "+game.scoreA+"-"+game.scoreB);
         } else {
@@ -155,13 +157,14 @@ public class Visuals
         System.out.println("you have "+game.guessesLeft+" guesses left");
         
         System.out.println(); // to space it out
-        
-        System.out.println(errorMessage);
+        if(errorMessage != "aaa") {
+            System.out.println(errorMessage);
+        }
         
         System.out.println(game.guessedWord);
         
         System.out.println(); // to space it out
-        if(!game.isFinished) {
+        if(!game.isFinished && errorMessage != "aaa") {
             System.out.print("> ");
         }
     }
