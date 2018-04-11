@@ -23,7 +23,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         // fill the word list with the contents of the file
-        File words = new File("words.txt"); // file
+        File words = new File("C:\\Users\\325385094\\Desktop\\CompSci\\words.txt"); // file
         Scanner fsc = new Scanner(words);   // file scanner
         for(int i = 0; i < listLength; i++) {
             wordList[i] = fsc.nextLine();
@@ -67,9 +67,9 @@ public class Main {
      **/
     private static boolean startGame(boolean multi) {
         Game g;
-        System.out.println("FLAG A");
+        //System.out.println("FLAG A");
         g = new Game(wordList[new Random().nextInt(56)], guesses, multi);
-        System.out.println("FLAG B");
+        //System.out.println("FLAG B");
         visuals.changeGame(g);
         return gameLoop(g);
     }
@@ -78,10 +78,11 @@ public class Main {
      * @param game The current Game object
      */
     private static boolean gameLoop(Game game) {
-        visuals.hangmanImage("");
+        visuals.hangmanImage("aaa");
+        System.out.println("A's turn\n");
         while(!game.isFinished) {  
-            char c = (game.pTurn == 'a') ? 'b':'a';
-            System.out.println(game.pTurn+"'s turn");
+            char c = (game.pTurn == 'a') ? 'B':'A';
+            System.out.println(c+"'s turn\n");
             visuals.hangmanImage(game.processGuess(new Scanner(System.in).nextLine()));
         }
 
