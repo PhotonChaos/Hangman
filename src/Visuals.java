@@ -3,57 +3,33 @@ import java.util.Scanner;
 
 public class Visuals
 {
-    private static String[] words = {"word1", "word2", "word3", "word4", "word5"};
-    private static String word = words[(int) (Math.random() * words.length)];
-    private static String star = new String(new char[word.length()]).replace("\0", "*");
-    private static int count = 0;
-    
+    //private static String[] words = {"word1", "word2", "word3", "word4", "word5"};
+    //private static String word = words[(int) (Math.random() * words.length)];
+    //private static String star = new String(new char[word.length()]).replace("\0", "*");
+    //private static int count = 0;
+    //private int prevGuessScore;
     private Game game;
     
     public Visuals(Game g) {
         game = g;
     }
-
     
-    /*
-    public void CSGroupPojectAshvanthVisuals(String guess)
-    {
-        String newstar = "";
-        for (int i = 0; i < word.length(); i++)
-        {
-            if (word.charAt(i) == guess.charAt(0))
-            {
-                newstar += guess.charAt(0);
-            } else if (star.charAt(i) != '*')
-            {
-                newstar += word.charAt(i);
-            } else
-            {
-                newstar += "*";
-            }
-        }
-
-        if (star.equals(newstar))
-        {
-            count++;
-            //hangmanImage();
-        }
-        else
-        {
-            star = newstar;
+    public void hangmanImage(String errorMessage) {
+        int count = game.mGuess - game.guessesLeft;
+        
+        if(game.isMultiplayer) {
+            System.out.println("Score (a-b): "+game.scoreA+"-"+game.scoreB);
+        } else {
+            System.out.println();
         }
         
-        if (star.equals(word))
+        if(count == 0) {
+            System.out.print("\n\n\n\n\n\n\n\n\n");
+            System.out.println(" __|__                ");
+        } else if (count == 1)
         {
-            System.out.println("Winner Winner, Chicken Dinner!: " + word);
-        }
-    }
-    */
-    public void hangmanImage(String errorMessage) {
-        if (count == 1)
-        {
-            System.out.println("Incorrect.");
-            //System.out.println("                    "); //1
+            //System.out.println("Incorrect.");
+            System.out.println("                    "); //1
             System.out.println("   |                  "); //2
             System.out.println("   |                  "); //3
             System.out.println("   |                  "); //4
@@ -62,12 +38,12 @@ public class Visuals
             System.out.println("   |                  "); //7
             System.out.println("   |                  "); //8
             System.out.println("   |                  "); //9
-            System.out.println("   |                  "); //10
+            System.out.println(" __|__                "); //10
         }
         
         else if (count == 2)
         {
-            System.out.println("Incorrect.");
+            //System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |           |      "); //2
             System.out.println("   |                  "); //3
@@ -82,12 +58,12 @@ public class Visuals
         
         else if (count == 3)
         {
-            System.out.println("Incorrect.");
+            //System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
             System.out.println("   |         /   \\   "); //3
             System.out.println("   |        |     |   "); //4
-            System.out.println("   |        \\___/    "); //5
+            System.out.println("   |         \\___/    "); //5
             System.out.println("   |                  "); //6
             System.out.println("   |                  "); //7
             System.out.println("   |                  "); //8
@@ -97,12 +73,12 @@ public class Visuals
         
         else if (count == 4)
         {
-            System.out.println("Incorrect.");
+            //System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
-            System.out.println("   |        //   \\   "); //3
-            System.out.println("   |       ||     ||  "); //4
-            System.out.println("   |        \\___//   "); //5
+            System.out.println("   |         /   \\   "); //3
+            System.out.println("   |        |     |   "); //4
+            System.out.println("   |         \\___/    "); //5
             System.out.println("   |           |      "); //6
             System.out.println("   |           |      "); //7
             System.out.println("   |           |      "); //8
@@ -112,68 +88,68 @@ public class Visuals
         
         else if (count == 5)
         {
-            System.out.println("Incorrect.");
+            //System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
-            System.out.println("   |        //   \\   "); //3
-            System.out.println("   |       ||     ||  "); //4
-            System.out.println("   |        \\___//   "); //5
+            System.out.println("   |         /   \\   "); //3
+            System.out.println("   |        |     |   "); //4
+            System.out.println("   |         \\___/    "); //5
             System.out.println("   |           |      "); //6
             System.out.println("   |           |      "); //7
             System.out.println("   |           |      "); //8
-            System.out.println("   |         //       "); //9
-            System.out.println(" __|__      //        "); //10
+            System.out.println("   |          /       "); //9
+            System.out.println(" __|__       /        "); //10
         }
         
         else if (count == 6)
         {
-            System.out.println("Incorrect.");
+            //System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
-            System.out.println("   |        //   \\   "); //3
-            System.out.println("   |       ||     ||  "); //4
-            System.out.println("   |        \\___//   "); //5
+            System.out.println("   |         /   \\   "); //3
+            System.out.println("   |        |     |   "); //4
+            System.out.println("   |         \\___/    "); //5
             System.out.println("   |           |      "); //6
             System.out.println("   |           |      "); //7
             System.out.println("   |           |      "); //8
-            System.out.println("   |         // \\    "); //9
-            System.out.println(" __|__      //   \\   "); //10
+            System.out.println("   |          / \\    "); //9
+            System.out.println(" __|__       /   \\   "); //10
         }
         
         else if (count == 7)
         {
-            System.out.println("Incorrect.");
+            //System.out.println("Incorrect.");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
-            System.out.println("   |        //   \\   "); //3
-            System.out.println("   |       ||     ||  "); //4
-            System.out.println("   |        \\___//   "); //5
+            System.out.println("   |         /   \\   "); //3
+            System.out.println("   |        |     |   "); //4
+            System.out.println("   |         \\___/    "); //5
             System.out.println("   |          _|      "); //6
-            System.out.println("   |        // |      "); //7
+            System.out.println("   |        /  |      "); //7
             System.out.println("   |           |      "); //8
-            System.out.println("   |         // \\    "); //9
-            System.out.println(" __|__      //   \\   "); //10
+            System.out.println("   |          / \\    "); //9
+            System.out.println(" __|__       /   \\   "); //10
         }
         
         else if (count == 8)
         {
-            System.out.println("YOU LOSE");
+            //System.out.println("YOU LOSE");
             System.out.println("   _____________      "); //1
             System.out.println("   |          _|_     "); //2
-            System.out.println("   |        //x x\\   "); //3
-            System.out.println("   |       || ___ ||  "); //4
-            System.out.println("   |        \\___//   "); //5
+            System.out.println("   |         /x x\\   "); //3
+            System.out.println("   |        | ___ |   "); //4
+            System.out.println("   |         \\___/    "); //5
             System.out.println("   |          _|_     "); //6
-            System.out.println("   |        // | \\   "); //7
+            System.out.println("   |        /  |  \\   "); //7
             System.out.println("   |           |      "); //8
-            System.out.println("   |         // \\    "); //9
-            System.out.println(" __|__      //   \\   "); //10
+            System.out.println("   |          / \\    "); //9
+            System.out.println(" __|__       /   \\   "); //10
         }
         
         System.out.print("Wrong Guesses: ");
-        for(char c : game.wrongGuesses) {
-            System.out.print(c+" ");
-        }
+        
+        System.out.println(game.wrongGuesses);
+        
         System.out.println();
         
         System.out.println("you have "+game.guessesLeft+" guesses left");
@@ -185,8 +161,54 @@ public class Visuals
         System.out.println(game.guessedWord);
         
         System.out.println(); // to space it out
+        if(!game.isFinished) {
+            System.out.print("> ");
+        }
+    }
+    
+    public void drawEndScreen() {
+        if(game.isMultiplayer) {
+            if(game.scoreA > game.scoreB) {
+                System.out.println("######################");
+                System.out.println("#   Player 1 Wins!   #");
+                System.out.println("#                    #");
+                System.out.println("#  Congratulations!  #");
+                System.out.println("#                    #");
+                System.out.println("######################");
+            } else if(game.scoreA < game.scoreB) {
+                System.out.println("######################");
+                System.out.println("#   Player 2 Wins!   #");
+                System.out.println("#                    #");
+                System.out.println("#  Congratulations!  #");
+                System.out.println("#                    #");
+                System.out.println("######################");
+            } else {
+                System.out.println("######################");
+                System.out.println("#                    #");
+                System.out.println("#    It's a Tie!     #");
+                System.out.println("#                    #");
+                System.out.println("#                    #");
+                System.out.println("######################");
+            }
+        } else {
+            if(game.isWon) {
+                System.out.println("######################");
+                System.out.println("#      You Win!      #");
+                System.out.println("#                    #");
+                System.out.println("#  Congratulations!  #");
+                System.out.println("#                    #");
+                System.out.println("######################");
+            } else {
+                System.out.println("#####################");
+                System.out.println("#     You Lost      #");
+                System.out.println("#                   #");
+                System.out.println("# Sorry about that! #");
+                System.out.println("#                   #");
+                System.out.println("#####################");
+            }
+        }
         
-        System.out.println(">");
+        System.out.println("The word was: "+game.word);
     }
     
     public void changeGame(Game g) {
