@@ -68,7 +68,7 @@ public class Main {
     private static boolean startGame(boolean multi) {
         Game g;
         //System.out.println("FLAG A");
-        g = new Game(wordList[new Random().nextInt(56)], guesses, multi);
+        g = new Game(wordList[new Random().nextInt(wordList.length)], guesses, multi);
         //System.out.println("FLAG B");
         visuals.changeGame(g);
         return gameLoop(g);
@@ -79,10 +79,10 @@ public class Main {
      */
     private static boolean gameLoop(Game game) {
         visuals.hangmanImage("aaa");
-        System.out.println("A's turn\n");
+        //System.out.println("A's turn\n");
         while(!game.isFinished) {  
-            char c = (game.pTurn == 'a') ? 'B':'A';
-            System.out.println(c+"'s turn\n");
+            //char c = (game.pTurn == 'a') ? 'B':'A';
+            //System.out.println(c+"'s turn\n");
             visuals.hangmanImage(game.processGuess(new Scanner(System.in).nextLine()));
         }
 
