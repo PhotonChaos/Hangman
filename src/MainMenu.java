@@ -1,14 +1,12 @@
 import java.util.Random;
 import java.util.Scanner;
 
-
-public class CSGroupPojectAshvanthDashesAndMenu
+public class MainMenu
 {
-    String secret;
     StringBuffer dashes;
     char letter;
     
-    public CSGroupPojectAshvanthDashesAndMenu()
+    public static void drawMenu()
     {
         System.out.println(" |================================================================|================================================================|");
         System.out.println(" |                                                                |                                                                |");
@@ -47,16 +45,8 @@ public class CSGroupPojectAshvanthDashesAndMenu
         System.out.println(" |                                                                |                                                                |");
         System.out.println(" |                                                                |                                                                |");
         System.out.println(" |================================================================|================================================================|");
-    }
-
-    public static void matchLetter(String secret, StringBuffer dashes, char letter)
-    {
-        for (int index = 0; index < secret.length(); index++)
-            if (secret.charAt(index) == letter)
-            {
-                dashes.setCharAt(index, letter);
-            }
-        System.out.print("nice guess - ");
+        System.out.println("\n");
+        System.out.print("> ");
     }
 
     public static StringBuffer makeDashes(String s)
@@ -69,7 +59,7 @@ public class CSGroupPojectAshvanthDashesAndMenu
         return dashes;
     }
 
-    public static void Muliplayer()
+    public static void Muliplayer(boolean multiplayer)
     {
         if (multiplayer == true) //whatever you called the multiplayer
         {
