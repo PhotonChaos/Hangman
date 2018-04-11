@@ -173,14 +173,14 @@ public class Visuals
         if(game.isMultiplayer) {
             if(game.scoreA > game.scoreB) {
                 System.out.println("######################");
-                System.out.println("#   Player 1 Wins!   #");
+                System.out.println("#   Player A Wins!   #");
                 System.out.println("#                    #");
                 System.out.println("#  Congratulations!  #");
                 System.out.println("#                    #");
                 System.out.println("######################");
             } else if(game.scoreA < game.scoreB) {
                 System.out.println("######################");
-                System.out.println("#   Player 2 Wins!   #");
+                System.out.println("#   Player B Wins!   #");
                 System.out.println("#                    #");
                 System.out.println("#  Congratulations!  #");
                 System.out.println("#                    #");
