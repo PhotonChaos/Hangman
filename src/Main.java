@@ -23,7 +23,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         // fill the word list with the contents of the file
-        File words = new File("C:\\Users\\325385094\\Desktop\\CompSci\\words.txt"); // file
+        File words = new File("words.txt"); // file
         Scanner fsc = new Scanner(words);   // file scanner
         for(int i = 0; i < listLength; i++) {
             wordList[i] = fsc.nextLine();
