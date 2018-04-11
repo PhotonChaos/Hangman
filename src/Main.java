@@ -18,22 +18,18 @@ public class Main {
     private static final int listLength = 55;
     private static String[] wordList = new String[listLength];
     private static int roundsPlayed = 0;
-
+    
     private static final Visuals visuals = new Visuals(new Game("")); // the current game class is a dummy class
 
     public static void main(String[] args) throws IOException {
         // fill the word list with the contents of the file
-        File words = new File("C:\\Users\\Admin\\Desktop\\Hangman\\out\\production\\Hangman\\words.txt"); // file
+        File words = new File("C:\\Users\\325385094\\Desktop\\CompSci\\words.txt"); // file
         Scanner fsc = new Scanner(words);   // file scanner
         for(int i = 0; i < listLength; i++) {
             wordList[i] = fsc.nextLine();
         }
         fsc.close();
-
-        for(String s : wordList) {
-            System.out.println(s);
-        }
-
+        
         boolean multi;
         boolean res;
         boolean exit = false;
@@ -41,9 +37,15 @@ public class Main {
 
         while(!exit) {
             //START MENU HERE
-            System.out.println("Single, or multiplayer? ");
-            multi = Objects.equals(sc.nextLine().toLowerCase(), "multiplayer");
-
+            String s;
+            do {
+                System.out.print("\r");
+                MainMenu.drawMenu();
+                s = sc.nextLine();
+            } while(!(s.equals("2") || s.equals("1")));
+            
+            multi = s.equals("2");
+            
             do {
                 ++roundsPlayed;
 
@@ -53,6 +55,8 @@ public class Main {
             System.out.println("Enter 'e' to exit, or anything else to continue");
             exit = sc.nextLine().toLowerCase().contains("e");
         }
+        
+        System.out.println("Thanks for playing!");
         // END OF PROGRAM
     }
 
@@ -63,7 +67,9 @@ public class Main {
      **/
     private static boolean startGame(boolean multi) {
         Game g;
+        System.out.println("FLAG A");
         g = new Game(wordList[new Random().nextInt(56)], guesses, multi);
+        System.out.println("FLAG B");
         visuals.changeGame(g);
         return gameLoop(g);
     }
@@ -72,17 +78,21 @@ public class Main {
      * @param game The current Game object
      */
     private static boolean gameLoop(Game game) {
-        while(game.guessesLeft > 0) {
-            visuals.drawHangman(game.processGuess(new Scanner(System.in).nextLine()));
+        visuals.hangmanImage("");
+        while(!game.isFinished) {  
+            char c = (game.pTurn == 'a') ? 'b':'a';
+            System.out.println(game.pTurn+"'s turn");
+            visuals.hangmanImage(game.processGuess(new Scanner(System.in).nextLine()));
         }
 
         return endGame(game);
     }
 
     private static boolean endGame(Game g) {
+        visuals.drawEndScreen();
         System.out.println("Would you like to play again? (y/n)");
         System.out.print("> ");
-
-        return Character.toLowerCase(new Scanner(System.in).nextLine().toCharArray()[0]) == 'y';
+        String s = new Scanner(System.in).nextLine();
+        return s.length() == 1 && s.toCharArray()[0] == 'y';
     }
 }
